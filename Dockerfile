@@ -21,12 +21,4 @@ RUN npm run build
 # Nginx Phase
 FROM nginx
 #Copy output from build phase to nginx phase
-COPY --from=builder /app/build /usr/share/nginx/html
-
-
-
-
-
-
-
-
+COPY --from=builder /app/build /usr/share/nginx/html    
