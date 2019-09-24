@@ -20,5 +20,7 @@ RUN npm run build
 
 # Nginx Phase
 FROM nginx
+#Expose Port 80 for AWS Beanstalk
+EXPOSE 80
 #Copy output from build phase to nginx phase
 COPY --from=builder /app/build /usr/share/nginx/html    
